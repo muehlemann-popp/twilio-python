@@ -14,8 +14,9 @@ from twilio.base.page import Page
 
 
 class NetworkAccessProfileNetworkList(ListResource):
-    """ PLEASE NOTE that this class contains beta products that are subject to
-    change. Use them with caution. """
+    """ PLEASE NOTE that this class contains preview products that are subject
+    to change. Use them with caution. If you currently do not have developer
+    preview access, please contact help@twilio.com. """
 
     def __init__(self, version, network_access_profile_sid):
         """
@@ -170,8 +171,9 @@ class NetworkAccessProfileNetworkList(ListResource):
 
 
 class NetworkAccessProfileNetworkPage(Page):
-    """ PLEASE NOTE that this class contains beta products that are subject to
-    change. Use them with caution. """
+    """ PLEASE NOTE that this class contains preview products that are subject
+    to change. Use them with caution. If you currently do not have developer
+    preview access, please contact help@twilio.com. """
 
     def __init__(self, version, response, solution):
         """
@@ -215,8 +217,9 @@ class NetworkAccessProfileNetworkPage(Page):
 
 
 class NetworkAccessProfileNetworkContext(InstanceContext):
-    """ PLEASE NOTE that this class contains beta products that are subject to
-    change. Use them with caution. """
+    """ PLEASE NOTE that this class contains preview products that are subject
+    to change. Use them with caution. If you currently do not have developer
+    preview access, please contact help@twilio.com. """
 
     def __init__(self, version, network_access_profile_sid, sid):
         """
@@ -272,8 +275,9 @@ class NetworkAccessProfileNetworkContext(InstanceContext):
 
 
 class NetworkAccessProfileNetworkInstance(InstanceResource):
-    """ PLEASE NOTE that this class contains beta products that are subject to
-    change. Use them with caution. """
+    """ PLEASE NOTE that this class contains preview products that are subject
+    to change. Use them with caution. If you currently do not have developer
+    preview access, please contact help@twilio.com. """
 
     def __init__(self, version, payload, network_access_profile_sid, sid=None):
         """

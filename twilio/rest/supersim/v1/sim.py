@@ -15,8 +15,9 @@ from twilio.base.page import Page
 
 
 class SimList(ListResource):
-    """ PLEASE NOTE that this class contains beta products that are subject to
-    change. Use them with caution. """
+    """ PLEASE NOTE that this class contains preview products that are subject
+    to change. Use them with caution. If you currently do not have developer
+    preview access, please contact help@twilio.com. """
 
     def __init__(self, version):
         """
@@ -162,8 +163,9 @@ class SimList(ListResource):
 
 
 class SimPage(Page):
-    """ PLEASE NOTE that this class contains beta products that are subject to
-    change. Use them with caution. """
+    """ PLEASE NOTE that this class contains preview products that are subject
+    to change. Use them with caution. If you currently do not have developer
+    preview access, please contact help@twilio.com. """
 
     def __init__(self, version, response, solution):
         """
@@ -202,8 +204,9 @@ class SimPage(Page):
 
 
 class SimContext(InstanceContext):
-    """ PLEASE NOTE that this class contains beta products that are subject to
-    change. Use them with caution. """
+    """ PLEASE NOTE that this class contains preview products that are subject
+    to change. Use them with caution. If you currently do not have developer
+    preview access, please contact help@twilio.com. """
 
     def __init__(self, version, sid):
         """
@@ -273,8 +276,9 @@ class SimContext(InstanceContext):
 
 
 class SimInstance(InstanceResource):
-    """ PLEASE NOTE that this class contains beta products that are subject to
-    change. Use them with caution. """
+    """ PLEASE NOTE that this class contains preview products that are subject
+    to change. Use them with caution. If you currently do not have developer
+    preview access, please contact help@twilio.com. """
 
     class Status(object):
         NEW = "new"

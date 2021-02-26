@@ -16,6 +16,8 @@ from twilio.base.page import Page
 
 
 class SyncListItemList(ListResource):
+    """ PLEASE NOTE that this class contains beta products that are subject to
+    change. Use them with caution. """
 
     def __init__(self, version, service_sid, list_sid):
         """
@@ -202,6 +204,8 @@ class SyncListItemList(ListResource):
 
 
 class SyncListItemPage(Page):
+    """ PLEASE NOTE that this class contains beta products that are subject to
+    change. Use them with caution. """
 
     def __init__(self, version, response, solution):
         """
@@ -247,6 +251,8 @@ class SyncListItemPage(Page):
 
 
 class SyncListItemContext(InstanceContext):
+    """ PLEASE NOTE that this class contains beta products that are subject to
+    change. Use them with caution. """
 
     def __init__(self, version, service_sid, list_sid, index):
         """
@@ -340,6 +346,8 @@ class SyncListItemContext(InstanceContext):
 
 
 class SyncListItemInstance(InstanceResource):
+    """ PLEASE NOTE that this class contains beta products that are subject to
+    change. Use them with caution. """
 
     class QueryResultOrder(object):
         ASC = "asc"

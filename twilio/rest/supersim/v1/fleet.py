@@ -15,8 +15,9 @@ from twilio.base.page import Page
 
 
 class FleetList(ListResource):
-    """ PLEASE NOTE that this class contains beta products that are subject to
-    change. Use them with caution. """
+    """ PLEASE NOTE that this class contains preview products that are subject
+    to change. Use them with caution. If you currently do not have developer
+    preview access, please contact help@twilio.com. """
 
     def __init__(self, version):
         """
@@ -45,7 +46,7 @@ class FleetList(ListResource):
         :param bool data_enabled: Defines whether SIMs in the Fleet are capable of using data connectivity
         :param unicode data_limit: The total data usage (download and upload combined) in Megabytes that each Sim resource assigned to the Fleet resource can consume
         :param bool commands_enabled: Defines whether SIMs in the Fleet are capable of sending and receiving machine-to-machine SMS via Commands
-        :param unicode commands_url: The URL that will receive a webhook when a Super SIM in the Fleet is used to send an SMS from your device to the Commands number
+        :param unicode commands_url: The URL that will receive a webhook when a SIM in the Fleet originates a machine-to-machine SMS via Commands
         :param unicode commands_method: A string representing the HTTP method to use when making a request to `commands_url`
 
         :returns: The created FleetInstance
@@ -188,8 +189,9 @@ class FleetList(ListResource):
 
 
 class FleetPage(Page):
-    """ PLEASE NOTE that this class contains beta products that are subject to
-    change. Use them with caution. """
+    """ PLEASE NOTE that this class contains preview products that are subject
+    to change. Use them with caution. If you currently do not have developer
+    preview access, please contact help@twilio.com. """
 
     def __init__(self, version, response, solution):
         """
@@ -228,8 +230,9 @@ class FleetPage(Page):
 
 
 class FleetContext(InstanceContext):
-    """ PLEASE NOTE that this class contains beta products that are subject to
-    change. Use them with caution. """
+    """ PLEASE NOTE that this class contains preview products that are subject
+    to change. Use them with caution. If you currently do not have developer
+    preview access, please contact help@twilio.com. """
 
     def __init__(self, version, sid):
         """
@@ -258,25 +261,17 @@ class FleetContext(InstanceContext):
 
         return FleetInstance(self._version, payload, sid=self._solution['sid'], )
 
-    def update(self, unique_name=values.unset, network_access_profile=values.unset,
-               commands_url=values.unset, commands_method=values.unset):
+    def update(self, unique_name=values.unset, network_access_profile=values.unset):
         """
         Update the FleetInstance
 
         :param unicode unique_name: An application-defined string that uniquely identifies the resource
         :param unicode network_access_profile: The SID or unique name of the Network Access Profile of the Fleet
-        :param unicode commands_url: The URL that will receive a webhook when a Super SIM in the Fleet is used to send an SMS from your device to the Commands number
-        :param unicode commands_method: A string representing the HTTP method to use when making a request to `commands_url`
 
         :returns: The updated FleetInstance
         :rtype: twilio.rest.supersim.v1.fleet.FleetInstance
         """
-        data = values.of({
-            'UniqueName': unique_name,
-            'NetworkAccessProfile': network_access_profile,
-            'CommandsUrl': commands_url,
-            'CommandsMethod': commands_method,
-        })
+        data = values.of({'UniqueName': unique_name, 'NetworkAccessProfile': network_access_profile, })
 
         payload = self._version.update(method='POST', uri=self._uri, data=data, )
 
@@ -294,8 +289,9 @@ class FleetContext(InstanceContext):
 
 
 class FleetInstance(InstanceResource):
-    """ PLEASE NOTE that this class contains beta products that are subject to
-    change. Use them with caution. """
+    """ PLEASE NOTE that this class contains preview products that are subject
+    to change. Use them with caution. If you currently do not have developer
+    preview access, please contact help@twilio.com. """
 
     class DataMetering(object):
         PAYG = "payg"
@@ -426,7 +422,7 @@ class FleetInstance(InstanceResource):
     @property
     def commands_url(self):
         """
-        :returns: The URL that will receive a webhook when a Super SIM in the Fleet is used to send an SMS from your device to the Commands number
+        :returns: The URL that will receive a webhook when a SIM in the Fleet originates a machine-to-machine SMS via Commands
         :rtype: unicode
         """
         return self._properties['commands_url']
@@ -456,25 +452,17 @@ class FleetInstance(InstanceResource):
         """
         return self._proxy.fetch()
 
-    def update(self, unique_name=values.unset, network_access_profile=values.unset,
-               commands_url=values.unset, commands_method=values.unset):
+    def update(self, unique_name=values.unset, network_access_profile=values.unset):
         """
         Update the FleetInstance
 
         :param unicode unique_name: An application-defined string that uniquely identifies the resource
         :param unicode network_access_profile: The SID or unique name of the Network Access Profile of the Fleet
-        :param unicode commands_url: The URL that will receive a webhook when a Super SIM in the Fleet is used to send an SMS from your device to the Commands number
-        :param unicode commands_method: A string representing the HTTP method to use when making a request to `commands_url`
 
         :returns: The updated FleetInstance
         :rtype: twilio.rest.supersim.v1.fleet.FleetInstance
         """
-        return self._proxy.update(
-            unique_name=unique_name,
-            network_access_profile=network_access_profile,
-            commands_url=commands_url,
-            commands_method=commands_method,
-        )
+        return self._proxy.update(unique_name=unique_name, network_access_profile=network_access_profile, )
 
     def __repr__(self):
         """

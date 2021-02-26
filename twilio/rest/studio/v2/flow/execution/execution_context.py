@@ -14,6 +14,8 @@ from twilio.base.page import Page
 
 
 class ExecutionContextList(ListResource):
+    """ PLEASE NOTE that this class contains beta products that are subject to
+    change. Use them with caution. """
 
     def __init__(self, version, flow_sid, execution_sid):
         """
@@ -68,6 +70,8 @@ class ExecutionContextList(ListResource):
 
 
 class ExecutionContextPage(Page):
+    """ PLEASE NOTE that this class contains beta products that are subject to
+    change. Use them with caution. """
 
     def __init__(self, version, response, solution):
         """
@@ -113,6 +117,8 @@ class ExecutionContextPage(Page):
 
 
 class ExecutionContextContext(InstanceContext):
+    """ PLEASE NOTE that this class contains beta products that are subject to
+    change. Use them with caution. """
 
     def __init__(self, version, flow_sid, execution_sid):
         """
@@ -159,6 +165,8 @@ class ExecutionContextContext(InstanceContext):
 
 
 class ExecutionContextInstance(InstanceResource):
+    """ PLEASE NOTE that this class contains beta products that are subject to
+    change. Use them with caution. """
 
     def __init__(self, version, payload, flow_sid, execution_sid):
         """

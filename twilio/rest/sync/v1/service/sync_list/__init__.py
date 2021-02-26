@@ -17,6 +17,8 @@ from twilio.rest.sync.v1.service.sync_list.sync_list_permission import SyncListP
 
 
 class SyncListList(ListResource):
+    """ PLEASE NOTE that this class contains beta products that are subject to
+    change. Use them with caution. """
 
     def __init__(self, version, service_sid):
         """
@@ -162,6 +164,8 @@ class SyncListList(ListResource):
 
 
 class SyncListPage(Page):
+    """ PLEASE NOTE that this class contains beta products that are subject to
+    change. Use them with caution. """
 
     def __init__(self, version, response, solution):
         """
@@ -201,6 +205,8 @@ class SyncListPage(Page):
 
 
 class SyncListContext(InstanceContext):
+    """ PLEASE NOTE that this class contains beta products that are subject to
+    change. Use them with caution. """
 
     def __init__(self, version, service_sid, sid):
         """
@@ -313,6 +319,8 @@ class SyncListContext(InstanceContext):
 
 
 class SyncListInstance(InstanceResource):
+    """ PLEASE NOTE that this class contains beta products that are subject to
+    change. Use them with caution. """
 
     def __init__(self, version, payload, service_sid, sid=None):
         """
